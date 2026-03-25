@@ -1,0 +1,27 @@
+//Mariana Ribeiro da Silva
+/*verifique se o número está no intervalo entre 50 (inclusive) e 100 (inclusive);
+se estiver:
+¨ imprimir “Pertence ao intervalo”;
+senão:
+¨ imprimir “Não pertence ao intervalo”
+ */
+import java.util.Scanner;
+
+public class Exercicio5 {
+
+    public static void main(String[] args) {
+        Scanner entrada=new Scanner(System.in);
+        System.out.println("Digite um numero inteiro:");
+        int numero=entrada.nextInt();
+
+        if(numero >=50 && numero <=100){
+        System.out.println("Pertence ao intervalo");
+        }
+        else{
+            System.out.println("Não pertence ao intervalo50");
+        }
+
+        entrada.close();
+    }
+
+}
