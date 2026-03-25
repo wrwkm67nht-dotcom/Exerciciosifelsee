@@ -1,0 +1,31 @@
+//Mariana Ribeiro da Silva 
+/*Ler o salário de uma pessoa e calcular e imprimir o desconto do 	INSS (calculado‼) 
+de acordo com a tabela  */
+import java.util.Scanner;
+
+public class Exercicio12 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+    
+        System.out.print("Digite o salário: ");
+        double salario = entrada.nextDouble();
+
+        double desconto = 0;
+
+        
+        if (salario <= 600) {
+            desconto = 0;
+        } else if (salario <= 1200) {
+            desconto = salario * 0.20;
+        } else if (salario <= 2000) {
+            desconto = salario * 0.25;
+        } else {
+            desconto = salario * 0.30;
+        }
+
+        System.out.println("Desconto do INSS: R$ " + desconto);
+
+        entrada.close();
+    }
+}
