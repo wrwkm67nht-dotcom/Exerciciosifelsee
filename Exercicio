@@ -1,0 +1,58 @@
+//Mariana Ribeiro da Silva
+/*Criar uma calculadora de operações básicas:
+soma, subtração, multiplicação e divisão.
+o algoritmo deve ler dois números e o sinal correspondente à operação desejada;
+utilize o tipo char para ler a operação;
+no final deve ser impresso o resultado.
+Restrições:
+se o sinal digitado não corresponder a uma operação. . .
+¨ apresentar a mensagem Sinal Inválido e finalizar.
+para a operação de divisão verificar se o divisor é válido (maior que zero)!
+¨ caso seja menor ou igual a zero, informar a mensagem “Impossível dividir‼”*/
+
+import java.util.Scanner;
+
+public class Exercicio13 {
+
+    public static void main(String[] args) {
+        Scanner Entrada = new Scanner(System.in);
+
+        double num1, num2, resultado;
+        
+
+        System.out.print("Digite o primeiro número: ");
+        num1 = Entrada.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        num2 = Entrada.nextDouble();
+
+        System.out.print("Digite a operação (+, -, *, /): ");
+        String operacao = Entrada.next();
+
+        if(operacao.equals("+")){
+            resultado = num1 + num2;
+            System.out.println("Resultado: " + resultado);
+
+        } else if (operacao.equals("-")) {
+            resultado = num1 - num2;
+            System.out.println("Resultado: " + resultado);
+
+        } else if (operacao.equals("*")) {
+            resultado = num1 * num2;
+            System.out.println("Resultado: " + resultado);
+            }
+        else if (operacao.equals("/")) {
+            
+            if (num2 <= 0) {
+                System.out.println("Impossível dividir‼");
+            } else {
+                resultado = num1 / num2;
+                System.out.println("Resultado: " + resultado);
+            }
+        }
+        else {
+            System.out.println("Sinal inválido!");
+        }
+        Entrada.close();
+    }
+}
