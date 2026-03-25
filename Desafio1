@@ -1,0 +1,43 @@
+//Mariana Ribeiro da Silva
+/*Desenvolver um algoritmo para definir se uma pessoa está apta 	a votar no Brasil.
+Pesquise: Quais são as regras para se votar no Brasil?
+Identifique quais os dados de entrada necessários para resolver o problema.
+Identifique quais regras devem ser satisfeitas para definir que
+uma pessoa está apta a votar. Faça um programa que pede as informações
+necessárias e verifica se 	uma pessoa está apta a votar.
+ */
+import java.util.Scanner;
+
+public class Desafio1 {
+    public static void main(String[] args) {
+        Scanner Entrada = new Scanner(System.in);
+
+        int idade;
+        String alfabetizado;
+        String brasileiro;
+
+        System.out.print("Digite sua idade: ");
+        idade = Entrada.nextInt();
+
+        System.out.print("A pessoa é alfabetizada? (SIM/NAO): ");
+        alfabetizado = Entrada.next();
+
+        System.out.print("A pessoa é brasileira? (SIM/NAO): ");
+        brasileiro = Entrada.next();
+
+        if (!brasileiro.equalsIgnoreCase("SIM")) {
+            System.out.println("Não pode votar.");
+
+        } else if (idade < 16) {
+            System.out.println("Não pode votar.");
+
+        } else if (idade >= 18 && idade <= 70 && alfabetizado.equalsIgnoreCase("SIM")) {
+            System.out.println("Voto obrigatório.");
+
+        } else {
+            System.out.println("Voto opcional.");
+        }
+
+        Entrada.close();
+    }
+}
